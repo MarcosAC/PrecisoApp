@@ -10,7 +10,10 @@ const Routes = () => {
   return (
     <Stack.Navigator initialRouteName='LoginPage' screenOptions={{ headerShown: false }}>
       <Stack.Screen name='LoginPage' component={LoginPage}/>
-      <Stack.Screen name='CadastroProfissionalPage' component={CadastroProfissionalPage} options= {{ title: 'Cadastro' }}/>
+      <Stack.Screen 
+        name='CadastroProfissionalPage'
+        component={CadastroProfissionalPage}
+        options= {{ title: 'Cadastro' }} />
     </Stack.Navigator>
   );
 };

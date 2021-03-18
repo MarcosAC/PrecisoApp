@@ -9,6 +9,7 @@ function LoginPage({ navigation }) {
                 placeholder="Email"                
                 autoFocus={true}
                 keyboardType="email-address"
+                underlineColorAndroid="black"                
                 // value={this.state.email}
                 // onChangeText={email => this.setState({email})}
             />
@@ -16,6 +17,7 @@ function LoginPage({ navigation }) {
                 style={styles.input}
                 placeholder="Senha"                
                 secureTextEntry={true}
+                underlineColorAndroid="black" 
                 // value={this.state.password}
                 // onChangeText={password => this.setState({password})}
             />
@@ -26,6 +28,14 @@ function LoginPage({ navigation }) {
             <TouchableHighlight style={styles.buttom} underlayColor={'#91b7ff'} onPress={() => navigation.navigate('CadastroProfissionalPage')}>                
                 <Text style={styles.buttonText}>Cancelar</Text>
             </TouchableHighlight>
+
+            <TouchableOpacity style={styles.buttonTransparent} onPress={() => navigation.navigate('CadastroProfissionalPage')}>
+                <Text style={styles.buttonTransparentText}>Criar Cadastro</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.buttonTransparent} onPress={() => navigation.navigate('CadastroProfissionalPage')}>
+                <Text style={styles.buttonTransparentText}>Esqueci a senha!</Text>
+            </TouchableOpacity>
         </View>
     );
 }
@@ -35,6 +45,12 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         padding: 15      
+    },    
+
+    input: {
+        marginTop: 20,
+        width: '100%',
+        fontSize: 18
     },
 
     buttom: {
@@ -49,13 +65,13 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
 
-    input: {
-        marginTop: 20,
-        width: '100%',
-        backgroundColor: '#EEE',
-        height: 40,
-        borderWidth: 1,
-        borderColor: '#333',
+    buttonTransparent: {
+        padding: 5
+    },
+
+    buttonTransparentText: {
+        fontSize: 16,
+        textAlign: 'center'
     },
 })
 
