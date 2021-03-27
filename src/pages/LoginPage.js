@@ -1,5 +1,12 @@
 import React from 'react';
-import { View, Text, TextInput, StyleSheet, Button, TouchableOpacity, TouchableHighlight } from 'react-native';
+import { 
+    View,
+    Text,
+    TextInput,
+    StyleSheet,
+    TouchableOpacity,
+    TouchableHighlight
+} from 'react-native';
 
 function LoginPage({ navigation }) {
     return (
@@ -22,18 +29,41 @@ function LoginPage({ navigation }) {
                 // onChangeText={password => this.setState({password})}
             />
 
-            <TouchableHighlight style={styles.buttom} underlayColor={'#91b7ff'} onPress={() => navigation.navigate('CadastroProfissionalPage')} >
+            <TouchableHighlight 
+                style={styles.buttom}
+                underlayColor={'#91b7ff'}
+                onPress={
+                    () => navigation.navigate('CadastroProfissionalPage')
+                }>
+
                 <Text style={styles.buttonText}>Entrar</Text>
             </TouchableHighlight>
-            <TouchableHighlight style={styles.buttom} underlayColor={'#91b7ff'} onPress={() => navigation.navigate('CadastroProfissionalPage')}>                
+
+            <TouchableHighlight 
+                style={styles.buttom}
+                underlayColor={'#91b7ff'}
+                onPress={
+                    () => navigation.navigate('CadastroProfissionalPage')
+                }>
+                
                 <Text style={styles.buttonText}>Cancelar</Text>
             </TouchableHighlight>
 
-            <TouchableOpacity style={styles.buttonTransparent} onPress={() => navigation.navigate('CadastroProfissionalPage')}>
+            <TouchableOpacity
+                style={styles.buttonTransparent}
+                onPress={
+                    () => navigation.navigate('CadastroProfissionalPage')
+                }>
+
                 <Text style={styles.buttonTransparentText}>Criar Cadastro</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.buttonTransparent} onPress={() => navigation.navigate('CadastroProfissionalPage')}>
+            <TouchableOpacity
+                style={styles.buttonTransparent}
+                onPress={
+                    () => navigation.navigate('CadastroProfissionalPage')
+                }>
+
                 <Text style={styles.buttonTransparentText}>Esqueci a senha!</Text>
             </TouchableOpacity>
         </View>
