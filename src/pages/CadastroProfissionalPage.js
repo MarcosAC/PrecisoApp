@@ -10,7 +10,7 @@ import {
 
 import NavigationBar from '../components/NavigationBar';
 
-function CadastroProfissionalPage() {
+function CadastroProfissionalPage({ navigation }) {
     return (
         <View style={styles.container}>
             <NavigationBar Title="Cadastro" />

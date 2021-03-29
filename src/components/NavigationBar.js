@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { 
     View,
     Text,
@@ -6,26 +6,28 @@ import {
     TouchableHighlight
 } from 'react-native';
 
+import { useNavigation } from '@react-navigation/native';
+
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 Icon.loadFont();
 
-class NavigationBar extends Component {
-    state = {
-        Title: ''
-    };
+function NavigationBar({ Title }) {
+    const navigation = useNavigation();
 
-    render() {
-        return (
-            <View style={styles.container}>
-                <TouchableHighlight>
-                    <Icon name="arrow-back" size={28} color="#fff" />
-                </TouchableHighlight>
-                
-                <Text style={styles.title}>{this.props.Title}</Text>                
-            </View>
-        );
-    }    
+    return (       
+        <View style={styles.container}>
+            <TouchableHighlight
+                onPress={
+                    () => navigation.navigate('LoginPage')
+                }>
+
+                <Icon name="arrow-back" size={28} color="#fff" />
+            </TouchableHighlight>
+            
+            <Text style={styles.title}>{Title}</Text>                
+        </View>       
+    );    
 }
 
 const styles = StyleSheet.create({
