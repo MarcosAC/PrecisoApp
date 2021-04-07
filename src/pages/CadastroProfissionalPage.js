@@ -20,7 +20,7 @@ function CadastroProfissionalPage({ navigation }) {
             <NavigationBar Title="Cadastro" />
 
             <ScrollView>
-                <View style={{ padding:15, flex:1 }}>
+                <View style={{ padding:15 }}>
                     <TextInput
                         style={styles.input}
                         placeholder="Nome"                
@@ -118,9 +118,7 @@ function CadastroProfissionalPage({ navigation }) {
     
 const styles= StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: 'center',
-        //padding: 15      
+        flex: 1
     },    
 
     input: {

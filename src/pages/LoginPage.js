@@ -33,7 +33,7 @@ function LoginPage({ navigation }) {
                 style={styles.buttom}
                 underlayColor={'#91b7ff'}
                 onPress={
-                    () => navigation.navigate('CadastroProfissionalPage')
+                    () => navigation.navigate('ListaServicoPage')
                 }>
 
                 <Text style={styles.buttonText}>Entrar</Text>
