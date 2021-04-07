@@ -8,9 +8,13 @@ import {
     ScrollView
 } from 'react-native';
 
+import {Picker} from '@react-native-picker/picker';
+
 import NavigationBar from '../components/NavigationBar';
 
 function CadastroProfissionalPage({ navigation }) {
+    const [value, setValue] = React.useState();
+
     return (
         <View style={styles.container}>
             <NavigationBar Title="Cadastro" />
@@ -49,6 +53,20 @@ function CadastroProfissionalPage({ navigation }) {
                         // value={this.state.password}
                         // onChangeText={password => this.setState({password})}
                     />
+
+                    <View style={{ marginTop: 20 }}>
+                        <Text style={styles.input}>Tipo Profissional</Text>
+
+                        <Picker
+                            selectedValue={value}
+                            onValueChange={(itemValue, itemIndex) =>
+                                setValue(itemValue)
+                            }>
+                            <Picker.Item label="Eletricista" value="Eletricista" />
+                            <Picker.Item label="Bombeiro Hidráulico" value="Bombeiro Hidráulico" />
+                        </Picker>
+                    </View>                    
+
                     <TextInput
                         style={styles.input}
                         placeholder="FormaPagamento"                
@@ -123,7 +141,19 @@ const styles= StyleSheet.create({
         fontSize: 20,
         color: '#FFF',
         textAlign: 'center'
-    }
+    },
+
+    picker: {
+        color: '#616161',
+        borderRadius: 14,
+        borderWidth: 1,
+        backgroundColor: '#e2e2e2',
+        borderColor: '#484848',
+        fontSize: 18
+        // width: 110,
+        // height:40,
+        //marginRight:16
+    },
 })
 
 export default CadastroProfissionalPage;
