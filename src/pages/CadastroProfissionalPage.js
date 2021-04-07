@@ -39,8 +39,7 @@ function CadastroProfissionalPage({ navigation }) {
                     />
                     <TextInput
                         style={styles.input}
-                        placeholder="Celular"                
-                        autoFocus={true}
+                        placeholder="Celular"
                         underlineColorAndroid="black"                
                         // value={this.state.email}
                         // onChangeText={email => this.setState({email})}
@@ -69,8 +68,7 @@ function CadastroProfissionalPage({ navigation }) {
 
                     <TextInput
                         style={styles.input}
-                        placeholder="FormaPagamento"                
-                        autoFocus={true}
+                        placeholder="FormaPagamento"  
                         underlineColorAndroid="black"                
                         // value={this.state.email}
                         // onChangeText={email => this.setState({email})}
@@ -141,19 +139,7 @@ const styles= StyleSheet.create({
         fontSize: 20,
         color: '#FFF',
         textAlign: 'center'
-    },
-
-    picker: {
-        color: '#616161',
-        borderRadius: 14,
-        borderWidth: 1,
-        backgroundColor: '#e2e2e2',
-        borderColor: '#484848',
-        fontSize: 18
-        // width: 110,
-        // height:40,
-        //marginRight:16
-    },
+    }
 })
 
 export default CadastroProfissionalPage;

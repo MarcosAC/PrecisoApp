@@ -18,11 +18,16 @@ function NavigationBar({ Title }) {
     return (       
         <View style={styles.container}>
             <TouchableHighlight
+                style={{ backgroundColor: '#0084f7' }}
                 onPress={
                     () => navigation.navigate('LoginPage')
                 }>
 
-                <Icon name="arrow-back" size={28} color="#fff" />
+                <Icon 
+                    style={{ backgroundColor: '#0084f7' }} 
+                    name="arrow-back" 
+                    size={28}
+                    color="#fff" />
             </TouchableHighlight>
             
             <Text style={styles.title}>{Title}</Text>                
@@ -47,6 +52,10 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         color: '#fff'
       },
+
+    buttonTransparent: {
+        padding: 5
+    }
 });
 
 export default NavigationBar;
