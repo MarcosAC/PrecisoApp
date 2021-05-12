@@ -1,5 +1,5 @@
 import { createStore, combineReducers } from "redux";
-import { profissionalReducer } from "../reducers/profissionalReducer";
+import profissionalReducer from "../reducers/profissionalReducer";
 
 const reducers = combineReducers({
     profissionalReducer: profissionalReducer,

@@ -1,4 +1,4 @@
-import { SALVAR_PROFISSIONAL } from '../actions/ActionType';
+import { SALVAR_PROFISSIONAL } from '../actions/actionType';
 
 const initialState = {
     nome: null,
